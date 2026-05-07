@@ -1,0 +1,21 @@
+# Secret keys - NEVER upload these
+.env
+
+# Python virtual environment - too large to upload
+venv/
+
+# Python cache files - auto-generated, not needed
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Data files with sensitive info
+*.csv
+*.log
