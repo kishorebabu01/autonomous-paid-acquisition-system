@@ -158,12 +158,65 @@ autonomous-paid-acquisition-system/
 
 This is Project 2 of 10 in my AI Growth Marketing portfolio, built to demonstrate production-grade marketing automation skills for growth roles at FAANG and well-funded startups.
 
-**Project 1:** [AI-Powered Real-Time Personalisation Engine](https://github.com/kishorebabu01)
+**Project 2:** [AI-Powered Real-Time Personalisation Engine](https://github.com/kishorebabu01)
 
 ---
 
 ## 📧 Contact
 
-**Kishore** — Growth Marketing + AI Systems
+**Kishore Babu** — Growth Marketing + AI Systems
 - GitHub: [@kishorebabu01](https://github.com/kishorebabu01)
-- LinkedIn: [Add your LinkedIn URL]
+- LinkedIn: www.linkedin.com/in/kishoreb0192
+
+ARCHITECTURE (For Better Understanding):
+┌─────────────────────────────────────────────────┐
+│           AUTONOMOUS PAID ACQUISITION            │
+│            INTELLIGENCE SYSTEM                   │
+└─────────────────────────────────────────────────┘
+
+┌──────────────┐     every 6 hours via      ┌──────────────┐
+│   GitHub     │ ─── GitHub Actions ──────► │   Python     │
+│   Actions    │                             │   Scripts    │
+└──────────────┘                             └──────┬───────┘
+                                                    │
+                                          pulls mock/real data
+                                                    │
+                                                    ▼
+                                          ┌──────────────────┐
+                                          │    Supabase      │
+                                          │   PostgreSQL     │
+                                          │                  │
+                                          │ raw_campaigns    │
+                                          │       ↓          │
+                                          │ SQL Views        │
+                                          │ (CTR,CPA,ROAS)   │
+                                          │       ↓          │
+                                          │ flagged_campaigns│
+                                          │       ↓          │
+                                          │ agent_decisions  │
+                                          └────────┬─────────┘
+                                                   │
+                                          flagged campaigns
+                                                   │
+                                                   ▼
+                                          ┌──────────────────┐
+                                          │  LangChain Agent │
+                                          │  + Groq LLaMA3.3 │
+                                          │                  │
+                                          │ Tool 1: pause    │
+                                          │ Tool 2: budget   │
+                                          │ Tool 3: copy     │
+                                          │ Tool 4: human    │
+                                          └────────┬─────────┘
+                                                   │
+                                          logs decisions
+                                                   │
+                                                   ▼
+                                          ┌──────────────────┐
+                                          │  Looker Studio   │
+                                          │   Dashboard      │
+                                          │                  │
+                                          │ Page 1: Decisions│
+                                          │ Page 2: Metrics  │
+                                          │ Page 3: Anomalies│
+                                          └──────────────────┘
