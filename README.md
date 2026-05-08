@@ -1,5 +1,18 @@
 # 🤖 Autonomous Paid Acquisition Intelligence System
 
+## ⚠️ Portfolio Note
+
+This project uses **synthetic campaign data** that 
+mirrors real Meta Ads campaign structure. The system 
+is designed to connect to the real Meta Ads API in 
+production — the only change required is replacing 
+`src/data/mock_data_generator.py` with a real API 
+call using the `facebook-business` Python SDK.
+
+All other components — SQL transformations, AI agent, 
+anomaly detection, GitHub Actions automation, and 
+Looker Studio dashboard — are production-ready.
+
 > AI-powered system that monitors Meta Ads campaigns 24/7, detects anomalies, and autonomously executes optimization actions using LangChain + Groq + Supabase.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
